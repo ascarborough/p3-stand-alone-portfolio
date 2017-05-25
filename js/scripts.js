@@ -1,6 +1,8 @@
 // Scripts
 
-$('figure').lightGallery({
+$('#lightgallery').lightGallery({
 selector: 'a',
-    mode: 'lg-lollipop',
+    mode: 'lg-slide',
+   iframeMaxWidth: '85%'
 });
+

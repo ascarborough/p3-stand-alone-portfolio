@@ -2,21 +2,99 @@
 @import "normalize"; 
 @import "lightgallery";
 @import "lg-transitions";
+@import "lg-thumbnail";
 
+
+
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
 body {
-    background: #4dc6d0;
+  background: #836692;
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
+
+.banner{
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  font-size: 25px;
+  font-family: sans-serif;
+  background-image: url("../img/Lavender-banner-02.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat; 
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 5px solid gray;
+}
+
+.banner h1 {
+    margin: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Arima Madurai', cursive;
+  text-shadow: 2px 2px 2px slategray;
+  }
+
+.banner span {
+  font-size: 2em;
+}
+
 
 // Portfolio items 
 
+#lightgallery {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+
 figure {
-    width: 300px;
-    background-color: #c49ec6;
+  border-radius: 10px;
+    width: 95%;
+    border: 5px double white; 
     padding: 1em; 
     text-align: center;
+    color: white;
+   transition: color 1s, 
+    background-color 1s;
+}
+
+figure:hover {
+  background-color: rgba(255, 255, 255, 0.54);
+  color: #565353; 
+  transition: color 1s, 
+    background-color 1s;
+;
 }
 
 figure img {
-    box-shadow: 2px 2px 2px gray;
+    width: 90%;
+    border: 3px solid gray; 
+}
+
+a:link {
+  color: #bacc5f; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: slategray;
+}
+
+/* Mobile: 320px = 20em */
+@media screen and (min-width: 35em) { 
+  figure {
+    width: 400px;
+  }
+ 
+  
 }
